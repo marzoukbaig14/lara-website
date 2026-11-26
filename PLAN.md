@@ -1,11 +1,15 @@
-# Sarah's Portfolio — Plan
+# lara-website — Plan
 
-Dark-academia, law / justice / human-rights single-page portfolio with a scroll-driven
+Sarah's dark-academia, law / justice / human-rights single-page portfolio with a scroll-driven
 justice-scale animation. Vite + React + TypeScript, Framer Motion, Formspree, deployed on Vercel.
+
+**Repo:** [marzoukbaig14/lara-website](https://github.com/marzoukbaig14/lara-website) · work happens on
+`feat/site-build`, which merges into `main` (Vercel deploys `main` to production).
 
 ## Where it runs
 
-**Locally on your Mac, in `~/code/sarah-portfolio`.** No Codespaces or remote session is needed:
+**Locally on your Mac, in `~/code/sarah-portfolio`** (the folder keeps its original name; it can be
+renamed to `lara-website` later if you like). No Codespaces or remote session is needed:
 Node 22 and npm are already installed, and `gh` is logged in. Claude does the building here;
 you only do the steps that need your accounts or Sarah's information (list at the bottom).
 
@@ -38,12 +42,12 @@ you only do the steps that need your accounts or Sarah's information (list at th
 5. **Content** — fill `src/content.ts` with Sarah's real bio, skills, projects, photo; add statue images with credits.
 6. **Contact** ✅ (needs the Formspree ID) — Formspree form: name / email / message, client validation, sending / success / error states.
 7. **Polish** — `prefers-reduced-motion` (static scale at rest, no zoom, gavel already down), mobile layout, meta/OG tags, favicon (scale glyph), Lighthouse ≥ 95.
-8. **Deploy** — GitHub repo → Vercel import → (optional) custom domain.
+8. **Deploy** — GitHub repo ✅ (`marzoukbaig14/lara-website`) → Vercel import → (optional) custom domain.
 
 ## What Claude does vs. what you do
 
 **Claude (in this session):** phases 2–7 end to end, sourcing and crediting public-domain statue images,
-creating the GitHub repo and pushing (once you say which account), and verifying the build in the browser.
+committing and pushing to `feat/site-build`, and verifying the build in the browser.
 
 **You (needs your accounts / Sarah's info):**
 
@@ -54,8 +58,8 @@ creating the GitHub repo and pushing (once you say which account), and verifying
    - Projects / experience: title, 1–2 line description, link(s)
    - Optional: CV/résumé PDF, LinkedIn, email to show
 2. **Formspree form for Sarah** — sign in at formspree.io with the inbox Sarah wants messages in → New Form → copy the ID (the part after `/f/`, like `mkgwgova`) → put it in `.env.local` as `VITE_FORMSPREE_ID=...` (or paste it in chat; it is a public ID, not a secret).
-3. **GitHub** — tell Claude which account owns the repo (yours, `marzoukbaig14`, or Sarah's). Claude creates and pushes it with `gh`.
-4. **Vercel** — vercel.com → Add New → Project → import the repo → add `VITE_FORMSPREE_ID` under Environment Variables → Deploy. (Vite is auto-detected: `npm run build`, output `dist`.)
+3. **GitHub** ✅ — done: the code lives in `marzoukbaig14/lara-website`.
+4. **Vercel** — vercel.com → Add New → Project → import `marzoukbaig14/lara-website` → add `VITE_FORMSPREE_ID` under Environment Variables → Deploy. (Vite is auto-detected: `npm run build`, output `dist`.) Production builds from `main`, so merge `feat/site-build` into `main` for the live site; pushes to `feat/site-build` get their own preview URLs.
 5. **Domain (optional, ~$10–15/yr)** — buy at Cloudflare/Porkbun/Namecheap → Vercel Settings → Domains → follow the DNS instructions.
 
 ## Run it

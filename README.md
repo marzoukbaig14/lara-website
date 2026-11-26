@@ -1,6 +1,7 @@
-# Sarah's Portfolio
+# lara-website
 
-Dark-academia law / justice portfolio. Vite + React + TypeScript, Framer Motion, Formspree.
+Sarah's portfolio: a dark-academia law / justice / human-rights site with a scroll-driven justice scale.
+Vite + React + TypeScript, Framer Motion, Formspree. Deployed on Vercel.
 
 ```bash
 npm install
