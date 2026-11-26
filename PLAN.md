@@ -32,11 +32,11 @@ you only do the steps that need your accounts or Sarah's information (list at th
 ## Build phases
 
 1. **Scaffold** ✅ — Vite app, deps installed, demo removed, folders + stub sections in place.
-2. **Design system + skeleton** — `index.css` tokens, fonts, grain, sticky `Nav` with active-section highlight (IntersectionObserver), all sections laid out with placeholder copy.
-3. **ScaleScene (centerpiece)** — inline SVG scale: base/column, beam group, two chain+plate groups. A tall sticky wrapper (~250vh); `scrollYProgress` drives (a) zoom 1 → ~2.4 into the scale, (b) beam rotation that follows scroll direction (velocity-based tilt via `useVelocity` + `useSpring`, so scrolling down lowers the right plate, up lowers the left), plates counter-rotate to hang level. Name/title/CTA fade out as you zoom in.
-4. **Reveals** — `Section` wrapper with fade/rise on enter. About: gavel SVG shakes, drops, hits the sound block ("boom" — a screen shake + dust ring), then photo + bio stagger in.
+2. **Design system + skeleton** ✅ — `index.css` tokens, fonts, grain, sticky `Nav` with active-section highlight (scroll position), all sections laid out with placeholder copy.
+3. **ScaleScene (centerpiece)** ✅ — inline SVG scale: base/column, beam group, two chain+plate groups. A tall sticky wrapper (~250vh); `scrollYProgress` drives (a) zoom 1 → ~2.4 into the scale, (b) beam rotation that follows scroll direction (velocity-based tilt via `useVelocity` + `useSpring`, so scrolling down lowers the right plate, up lowers the left), plates counter-rotate to hang level. Name/title/CTA fade out as you zoom in.
+4. **Reveals** ✅ — `Section` wrapper with fade/rise on enter. About: gavel SVG shakes, drops, hits the sound block ("boom" — a screen shake + dust ring), then photo + bio stagger in.
 5. **Content** — fill `src/content.ts` with Sarah's real bio, skills, projects, photo; add statue images with credits.
-6. **Contact** — Formspree form: name / email / message, client validation, sending / success / error states.
+6. **Contact** ✅ (needs the Formspree ID) — Formspree form: name / email / message, client validation, sending / success / error states.
 7. **Polish** — `prefers-reduced-motion` (static scale at rest, no zoom, gavel already down), mobile layout, meta/OG tags, favicon (scale glyph), Lighthouse ≥ 95.
 8. **Deploy** — GitHub repo → Vercel import → (optional) custom domain.
 
