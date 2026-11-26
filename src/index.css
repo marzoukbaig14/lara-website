@@ -1,0 +1,18 @@
+/* Design system — Phase 2 replaces this with the full dark-academia system. */
+:root {
+  --ink: #14110f;
+  --parchment: #e9dfc8;
+  --oxblood: #6b1e22;
+  --brass: #b08d57;
+  --candle: #f3c77a;
+  color-scheme: dark;
+}
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body { margin: 0; background: var(--ink); color: var(--parchment); font-family: Georgia, serif; }
+.nav { position: sticky; top: 0; display: flex; justify-content: space-between; padding: 1rem 1.5rem; background: rgba(20,17,15,.85); }
+.nav ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.nav a { color: var(--parchment); text-decoration: none; }
+.landing { min-height: 100vh; display: grid; place-content: center; text-align: center; }
+.section { min-height: 80vh; max-width: 900px; margin: 0 auto; padding: 6rem 1.5rem; scroll-margin-top: 4rem; }
+.numeral, .cta { color: var(--brass); }
